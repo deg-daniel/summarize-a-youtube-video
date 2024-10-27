@@ -4,6 +4,7 @@ import yt_dlp
 from deepgram import ( DeepgramClient, PrerecordedOptions, FileSource )
 from openai import OpenAI
 import re
+import tempfile
 
 def download_youtube(url,file):
     ydl_opts = {
@@ -49,6 +50,7 @@ url = st.text_input("Entres l'URL d'une vidéo youtube dont tu veux le résumé:
 
 if st.button("Go"):
     if re.match(r"^https://www\.youtube\.com/watch\?v=[a-zA-Z0-9_-]+$", url) is not None:
+        os.chdir(tempfile.gettempdir())
         file = url.replace('https://www.youtube.com/watch?v=','') + ".mp3"
         with st.spinner('Chargement de la vidéo... Il faut juste attendre 😇'):
             download_youtube(url,file)
