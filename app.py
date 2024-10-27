@@ -15,6 +15,7 @@ def download_youtube(url,file):
             'preferredcodec': 'mp3',
             'preferredquality': '192',
         }],
+        'ffmpeg_location': "/usr/bin/ffmpeg",
     }
     with yt_dlp.YoutubeDL(ydl_opts) as ydl:
         ydl.download([url])
