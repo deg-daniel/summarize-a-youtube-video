@@ -2,3 +2,4 @@ streamlit
 yt-dlp
 deepgram-sdk
 openai
+ffmpeg-python
