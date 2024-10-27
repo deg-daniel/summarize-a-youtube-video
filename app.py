@@ -56,7 +56,7 @@ if st.button("Go"):
         with st.spinner('Chargement de la vidéo... Il faut juste attendre 😇'):
             download_youtube(url,file)
         with st.spinner('Okay, voyons voir..'):
-            text = speech2text(file+".mp3")
+            text = speech2text(file)
             resume = resume(text)
         st.write(resume)
     else:
