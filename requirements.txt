@@ -1,5 +1,4 @@
 streamlit
-yt_dlp
-deepgram
+yt-dlp
+deepgram-sdk
 openai
-
