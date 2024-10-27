@@ -44,7 +44,7 @@ def resume(text):
     content = response.choices[0].message.content
     return content
 
-st.image('logo.jpg')
+st.image('https://raw.githubusercontent.com/deg-daniel/summarize-a-youtube-video/refs/heads/main/logo.jpg')
 st.title("download->deepgram->gtp4o")
 url = st.text_input("Entres l'URL d'une vidéo youtube dont tu veux le résumé:", value="https://www.youtube.com/watch?v=gl2u16fidrk")
 
